@@ -22,10 +22,7 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        env:
-          DATABASE_URL:${{secrets.DATABASE_URL}}
-          DATABASE_USERNAME:${{secrets.DATABASE_USERNAME}}
-          DATABASE_PASSWORD:${{secrets.DATABASE_PASSWORD}}
+
         run: mvn clean install
 
       - name: Upload artifact for deployment job
@@ -55,3 +52,7 @@ jobs:
           slot-name: 'Production'
           package: '*.jar'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9DD4C850EB7649749DD15CDC344D01F7 }}
+        env:
+          DATABASE_URL: ${{secrets.DATABASE_URL}}
+          DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
+          DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
