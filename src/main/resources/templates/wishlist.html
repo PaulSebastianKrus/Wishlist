@@ -38,20 +38,19 @@
                 </a>
             </td>
             <td>
-                <div class="button-container">
-                    <form th:action="@{/wishlist/delete/{wishlistId}(wishlistId=${wishlist.wishlistId})}" method="post">
-                        <input type="hidden" name="itemId" value="">
-                        <input type="hidden" name="wishlistId" th:value="${wishlist.wishlistId}">
-                        <input type="submit" value="Delete" class="wishlist-submit">
-                    </form>
-                    <form method="post" th:action="@{/wishlist/update/{wishlistId}(wishlistId=${wishlist.wishlistId})}">
-                        <input type="hidden" name="_method" value="PUT">
-                        <input type="hidden" name="wishlistId" th:value="${wishlist.wishlistId}">
-                        <label for="newWishlistName">New Wishlist Name:</label><br>
-                        <input type="text" id="newWishlistName" name="newWishlistName" required><br><br>
-                        <input type="submit" value="Update Wishlist" class="wishlist-submit">
-                    </form>
-                </div>
+                <form th:action="@{/wishlist/delete/{wishlistId}(wishlistId=${wishlist.wishlistId})}" method="post">
+                    <input type="hidden" name="itemId" value="">
+                    <input type="hidden" name="wishlistId" th:value="${wishlist.wishlistId}">
+                    <input type="submit" value="Delete" class="wishlist-submit">
+                </form>
+
+                <form method="post" th:action="@{/wishlist/update/{wishlistId}(wishlistId=${wishlist.wishlistId})}">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="wishlistId" th:value="${wishlist.wishlistId}">
+                    <label for="newWishlistName">New Wishlist Name:</label><br>
+                    <input type="text" id="newWishlistName" name="newWishlistName" required><br><br>
+                    <input type="submit" value="Update Wishlist" class="wishlist-submit">
+                </form>
             </td>
         </tr>
         </tbody>

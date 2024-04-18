@@ -11,11 +11,6 @@ body {
     text-align: center;
 }
 
-.button-container {
-    display: flex;
-    justify-content: space-between;
-}
-
 .container {
     max-width: 800px;
     margin: 0 auto;
