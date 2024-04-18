@@ -4,25 +4,25 @@
     <title>Edit Item</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="/wishlistDetails.css">
 </head>
 <body>
-<h1>Edit Item</h1>
-
+<h1 th:text=" ' Editting '+ ${item.name}"></h1>
 
 <form method="post" th:action="@{/wishlist/{wishlistId}/items/{itemId}/edit(wishlistId=${wishlistId},itemId=${itemId})}">
 
     <input type="hidden" name="wishlistId" th:value="${wishlistId}">
     <input type="hidden" name="itemId" th:value="${itemId}">
 
-    <label for="itemName">Item Name:</label><br>
-    <input type="text" id="itemName" name="name" th:value="${item.name}" required><br>
-    <label for="description">Description:</label><br>
-    <textarea id="description" name="description" required th:text="${item.description}"></textarea><br>
-    <label for="price">Price:</label><br>
-    <input type="number" id="price" name="price" th:value="${item.price}" required><br><br>
-    <button type="submit">Save Changes</button>
+    <div class="menu-container">
+        <label for="itemName">Item Name:</label><br>
+        <input type="text" id="itemName" name="name" th:value="${item.name}" required><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" required th:text="${item.description}"></textarea><br>
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" th:value="${item.price}" required><br><br>
+        <button type="submit">Save Changes</button>
+    </div>
 </form>
-
 </body>
 </html>

@@ -22,7 +22,7 @@ public class ItemRepository {
     public ItemRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
-// lol
+
     public int addItemToWishlist(int wishlistId, Item item) {
         String sql = "INSERT INTO wishlistItems (wishlistid, itemname, description, price) VALUES (?, ?, ?, ?)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
@@ -102,11 +102,11 @@ public class ItemRepository {
 
                 return new Item(itemId,name, description, price);
             } else {
-                return null; // Item not found
+                return null;
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            return null; // Handle the exception
+            return null;
         }
     }
 

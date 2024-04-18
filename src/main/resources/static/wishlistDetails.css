@@ -12,6 +12,18 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+.item-table {
+    width: calc(65% - 10px); /
+margin-bottom: 20px;
+}
+
+.menu-container {
+    width: calc(35% - 10px);
+    margin-bottom: 60px;
+    padding-left: 20px;
 }
 
 h1 {
@@ -57,7 +69,7 @@ form input[type="number"] {
 }
 
 form button[type="submit"] {
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -69,7 +81,7 @@ form button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Additional Styling */
+
 label {
     color: #333;
     font-weight: bold;
@@ -85,4 +97,11 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.wishlist-submit {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #007bff;
 }

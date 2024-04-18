@@ -1,22 +1,26 @@
-/* Reset default margin and padding */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* Basic styling */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
-    text-align: center; /* Center all content */
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center; /* Center content within container */
+    text-align: center;
 }
 
 h1, h2 {
@@ -30,20 +34,20 @@ form {
 label[for="wishlistName"] {
     display: block;
     margin-bottom: 5px;
-    text-align: center; /* Center text */
-    font-size: 18px; /* Increase font size */
+    text-align: center;
+    font-size: 18px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0 auto; /* Center the table */
+    margin: 0 auto;
 }
 
 table th, table td {
     padding: 8px;
-    text-align: center; /* Center align table content */
-    border-bottom: 1px solid #ddd; /* Add line separating table rows */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 table th {
@@ -51,24 +55,24 @@ table th {
 }
 
 .wishlist-name, .wishlist-submit {
-    width: calc(50% - 5px); /* Adjust width for both elements */
+    width: calc(50% - 5px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    display: inline-block; /* Ensures span respects width */
-    text-align: center; /* Center aligns the text */
-    box-sizing: border-box; /* Include padding and border in the width */
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .wishlist-submit {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    border: 1px solid #007bff; /* Same border for all buttons */
+    border: 1px solid #007bff;
 }
 
 .wishlist-submit:hover {
     background-color: #0056b3;
-    border: 1px solid #0056b3; /* Border color change on hover */
+    border: 1px solid #0056b3;
 }
