@@ -22,7 +22,7 @@ public class ItemRepository {
     public ItemRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
-
+// lol
     public int addItemToWishlist(int wishlistId, Item item) {
         String sql = "INSERT INTO wishlistItems (wishlistid, itemname, description, price) VALUES (?, ?, ?, ?)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
